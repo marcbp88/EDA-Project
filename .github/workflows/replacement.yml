@@ -32,6 +32,8 @@ jobs:
                 find . -type f \( -name "*.md" -o -name "*.ipynb" \) -exec sed -i 's/neuefische/spiced-academy/g' {} +
                 # Replace version number in *.md and *.ipynb files
                 find . -type f \( -name "*.md" -o -name "*.ipynb" \) -exec sed -i 's/3.11.3/3.12.7/g' {} +
+            elif [[ "$GITHUB_REPOSITORY" == "marcbp88/${GITHUB_REPOSITORY##*/}" ]]; then
+              echo "Running under marcbp88 — skipping organisation replacement."
             else
                 echo "Repository does not belong to either organization."
                 exit 1
