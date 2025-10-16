@@ -55,6 +55,11 @@ jobs:
               ;;
           esac
 
+          if [[ -z "$DISCORD_WEBHOOK" ]]; then
+            echo "DISCORD_WEBHOOK secret is not set. Skipping notification."
+            exit 0
+          fi
+
           curl -H "Content-Type: application/json" \
                -X POST \
                -d "{\"content\": \"$CONTENT\"}" \
