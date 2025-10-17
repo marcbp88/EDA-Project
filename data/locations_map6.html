@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2804d8df2abef27bec134939ad928a32 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2804d8df2abef27bec134939ad928a32" ></div>
+        
+    
+
+<div style="
+    position: fixed; 
+    bottom: 50px; left: 50px; width: 180px; height: 90px; 
+    z-index:9999; font-size:14px;
+    background-color:white;
+    border:2px solid grey;
+    border-radius:5px;
+    padding: 10px;
+    ">
+    <b>Legend</b><br>
+    <i class="fa fa-map-marker fa-2x" style="color:blue"></i>&nbsp; City<br>
+    <i class="fa fa-map-marker fa-2x" style="color:red"></i>&nbsp; Outside City
+</div>
+
+</body>
+<script>
+    
+    
+            var map_2804d8df2abef27bec134939ad928a32 = L.map(
+                "map_2804d8df2abef27bec134939ad928a32",
+                {
+                    center: [47.56603333333333, -122.22866666666668],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8b3f844577d3e102ca2ba3b23ea447ed = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8b3f844577d3e102ca2ba3b23ea447ed.addTo(map_2804d8df2abef27bec134939ad928a32);
+        
+    
+            var marker_44412073224fef5d2ff075ae244ffa9f = L.marker(
+                [47.557, -122.21],
+                {
+}
+            ).addTo(map_2804d8df2abef27bec134939ad928a32);
+        
+    
+            var icon_83dcd7fa6ad3e28cfc69594b2f4ad59d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6f5e0e4c579c9a8c5891b5e1cb0fc23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c40284afef87ac031aa64e093ed38f01 = $(`<div id="html_c40284afef87ac031aa64e093ed38f01" style="width: 100.0%; height: 100.0%;">City: Mercer Island<br>Address: 5044, Butterworth Road, Mercer Island, King County, Washington, 98040, United States</div>`)[0];
+                popup_f6f5e0e4c579c9a8c5891b5e1cb0fc23.setContent(html_c40284afef87ac031aa64e093ed38f01);
+            
+        
+
+        marker_44412073224fef5d2ff075ae244ffa9f.bindPopup(popup_f6f5e0e4c579c9a8c5891b5e1cb0fc23)
+        ;
+
+        
+    
+    
+                marker_44412073224fef5d2ff075ae244ffa9f.setIcon(icon_83dcd7fa6ad3e28cfc69594b2f4ad59d);
+            
+    
+            var marker_e28ccc0add46dc1918d71b8f527e8155 = L.marker(
+                [47.4418, -122.354],
+                {
+}
+            ).addTo(map_2804d8df2abef27bec134939ad928a32);
+        
+    
+            var icon_7d9ddfa689b56c4b66430fb24bf2a364 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cae7420b546b373b3e3b55e0a067754f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6235404b09d4c21121da32bebbe5c6f8 = $(`<div id="html_6235404b09d4c21121da32bebbe5c6f8" style="width: 100.0%; height: 100.0%;">City: Normandy Park<br>Address: 17845, Normandy Terrace Southwest, Normandy Park, King County, Washington, 98166, United States</div>`)[0];
+                popup_cae7420b546b373b3e3b55e0a067754f.setContent(html_6235404b09d4c21121da32bebbe5c6f8);
+            
+        
+
+        marker_e28ccc0add46dc1918d71b8f527e8155.bindPopup(popup_cae7420b546b373b3e3b55e0a067754f)
+        ;
+
+        
+    
+    
+                marker_e28ccc0add46dc1918d71b8f527e8155.setIcon(icon_7d9ddfa689b56c4b66430fb24bf2a364);
+            
+    
+            var marker_07a9a917c2c66fcd78c53c3492e3c00f = L.marker(
+                [47.65, -122.214],
+                {
+}
+            ).addTo(map_2804d8df2abef27bec134939ad928a32);
+        
+    
+            var icon_4ecb587c0741d87b3029efd19b3535a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_284f026a136ec01df8d2e668f31eeae7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f69806a214d1f68b9c027db2570d9a50 = $(`<div id="html_f69806a214d1f68b9c027db2570d9a50" style="width: 100.0%; height: 100.0%;">City: Yarrow Point<br>Address: 4604, 95th Avenue Northeast, Yarrow Point, King County, Washington, 98004, United States</div>`)[0];
+                popup_284f026a136ec01df8d2e668f31eeae7.setContent(html_f69806a214d1f68b9c027db2570d9a50);
+            
+        
+
+        marker_07a9a917c2c66fcd78c53c3492e3c00f.bindPopup(popup_284f026a136ec01df8d2e668f31eeae7)
+        ;
+
+        
+    
+    
+                marker_07a9a917c2c66fcd78c53c3492e3c00f.setIcon(icon_4ecb587c0741d87b3029efd19b3535a3);
+            
+    
+            var marker_9424e3169d155a87475c0853d6e3c97e = L.marker(
+                [47.6083, -122.11],
+                {
+}
+            ).addTo(map_2804d8df2abef27bec134939ad928a32);
+        
+    
+            var icon_130a7f414fc02837a16b5aeef2a22c6c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2bb8857a6171f220251c95c0fb6281fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3921a639a8e15b434ffce65adb44d35e = $(`<div id="html_3921a639a8e15b434ffce65adb44d35e" style="width: 100.0%; height: 100.0%;">City: Bellevue<br>Address: 138, West Lake Sammamish Parkway Southeast, Lake Hills, Bellevue, King County, Washington, 98008, United States</div>`)[0];
+                popup_2bb8857a6171f220251c95c0fb6281fa.setContent(html_3921a639a8e15b434ffce65adb44d35e);
+            
+        
+
+        marker_9424e3169d155a87475c0853d6e3c97e.bindPopup(popup_2bb8857a6171f220251c95c0fb6281fa)
+        ;
+
+        
+    
+    
+                marker_9424e3169d155a87475c0853d6e3c97e.setIcon(icon_130a7f414fc02837a16b5aeef2a22c6c);
+            
+    
+            var marker_a3f4233cb3ce941826758ff62a04e9b3 = L.marker(
+                [47.5925, -122.287],
+                {
+}
+            ).addTo(map_2804d8df2abef27bec134939ad928a32);
+        
+    
+            var icon_4f6440604f8cf294d16cc9d8fb214db3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d9f6c41e9f52ee5a397ed82fc279063 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c13d389d453098c2ae41aa61a096f16e = $(`<div id="html_c13d389d453098c2ae41aa61a096f16e" style="width: 100.0%; height: 100.0%;">City: Seattle<br>Address: 1134, Lakeside Avenue South, Leschi, Seattle, King County, Washington, 98144, United States</div>`)[0];
+                popup_9d9f6c41e9f52ee5a397ed82fc279063.setContent(html_c13d389d453098c2ae41aa61a096f16e);
+            
+        
+
+        marker_a3f4233cb3ce941826758ff62a04e9b3.bindPopup(popup_9d9f6c41e9f52ee5a397ed82fc279063)
+        ;
+
+        
+    
+    
+                marker_a3f4233cb3ce941826758ff62a04e9b3.setIcon(icon_4f6440604f8cf294d16cc9d8fb214db3);
+            
+    
+            var marker_e1ddc00d13f55edbd90229e8757a2d7b = L.marker(
+                [47.5466, -122.197],
+                {
+}
+            ).addTo(map_2804d8df2abef27bec134939ad928a32);
+        
+    
+            var icon_db40e144429bedd0a6bb8484d4660faf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f56527ac578265608cb384da96e33ef8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13ccd1788d7002774440cfa285518431 = $(`<div id="html_13ccd1788d7002774440cfa285518431" style="width: 100.0%; height: 100.0%;">City: Bellevue<br>Address: 6224, Hazelwood Lane Southeast, Newport Shores, Hazelwood, Bellevue, King County, Washington, 98006, United States</div>`)[0];
+                popup_f56527ac578265608cb384da96e33ef8.setContent(html_13ccd1788d7002774440cfa285518431);
+            
+        
+
+        marker_e1ddc00d13f55edbd90229e8757a2d7b.bindPopup(popup_f56527ac578265608cb384da96e33ef8)
+        ;
+
+        
+    
+    
+                marker_e1ddc00d13f55edbd90229e8757a2d7b.setIcon(icon_db40e144429bedd0a6bb8484d4660faf);
+            
+</script>
+</html>

@@ -96,3 +96,29 @@ Before you can start with plotly in Jupyter Lab you have to install node.js (if 
     pip install -r requirements.txt
     ```
  
+# EDA - How to read analysis
+
+1. The data is loaded in the [Fetching_the_data_eda.ipynb](1_Fetching_the_data_eda.ipynb) file.  
+    * this contains the SQL query loading it with sqlalchemy
+    * and saving the imported dataframe as a csv file
+
+2. The EDA is performed in [EDA.ipynb](EDA.ipynb) with the outline:   
+    * Exploration of data
+    * Check data for nan values
+    * Converting data types
+    * Correcting the renovation year
+    * Exploring nan values with missingno
+    * Selection of buyer: Jennifer Montgomery
+    * Getting the list with rows with nan values
+    * General overview of data
+    * Dropping rows with nan values in waterfront and yr_renovated
+    * Slicing and sorting data for desired output
+    * Determine the location out of coordinates
+    * Display the locations on a map
+    * Address the hypotheses  
+        * First hypothesis with different methods
+        * Second hypothesis
+        * Third hypothesis together with refining the location determination
+        * [Finding a buyer and displaying choices on a map](eda.ipynb#lets-find-a-recommendation-for-the-buyer)
+
+    
